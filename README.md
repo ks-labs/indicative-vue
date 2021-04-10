@@ -27,12 +27,12 @@ O Indicative Vue espera a seguinte estrutura de pasta:
 ```
 src/
 | - validation
-| - MyValidation
+  | - User.js
 main.js
 App.vue
 ```
 
-O conteúdo no arquivo MyValidation segue o mesmo padrão utilizado no Adonis.js
+O conteúdo no arquivo User.js segue o mesmo padrão utilizado no Adonis.js
 
 ```js
 // src/validation/User.js
