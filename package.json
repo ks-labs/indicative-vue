@@ -21,6 +21,9 @@
     "type": "git",
     "url": "git+https://github.com/ks-labs/indicative-vue.git"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/ksgl"
+  },
   "keywords": [],
   "license": "ISC",
   "bugs": {
