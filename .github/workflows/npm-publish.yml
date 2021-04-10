@@ -37,20 +37,3 @@ jobs:
       - run: npm publish $(ls *.tgz)
         env:
           NODE_AUTH_TOKEN: ${{secrets.AUTH_TOKEN}}
-  publish:
-    needs: [build, deploy-package]
-    name: "Publish NPM"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14.0.0
-      - run: npm install
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-      - run: echo "registry=https://npm.pkg.github.com/ks-labs" >> .npmrc
-      - run: npm publish $(ls *.tgz)
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.AUTH_TOKEN}}
