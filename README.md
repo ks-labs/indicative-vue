@@ -1,5 +1,7 @@
 # Indicative Vue
 
+[![CI/CD - GHPackages](https://github.com/ks-labs/indicative-vue/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/ks-labs/indicative-vue/actions/workflows/npm-publish.yml/badge.svg)
+
 Esse projeto é uma abstração do Validation utilizado no Adonis com o pacote indicative
 
 ## Instalação
