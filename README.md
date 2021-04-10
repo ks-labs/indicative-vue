@@ -35,6 +35,7 @@ App.vue
 O conteúdo no arquivo MyValidation segue o mesmo padrão utilizado no Adonis.js
 
 ```js
+// src/validation/User.js
 class User {
   get rules() {
     return {
@@ -60,7 +61,7 @@ Após a instalação do pacote um novo metodo ficara disponivel na instancia do 
 ```js
 const result = await this.$indicative(
   { toi: "1de3" },
-  require("@/validation/RouteItems.js")
+  require("@/validation/User.js")
 );
 
 // result = { valid: true or false, errors: [] *caso possua* }
