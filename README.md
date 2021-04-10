@@ -44,7 +44,7 @@ class User {
 
   get messages() {
     return {
-      "user.string": "Usuário deve ser do tipo string.",
+      "name.string": "Campo Nome deve ser do tipo string.",
     };
   }
 
