@@ -31,8 +31,8 @@ jobs:
         with:
           node-version: 14
         registry-url: https://npm.pkg.github.com/
-        scope: "@ks-labs"
-    - run: echo "registry=https://npm.pkg.github.com/@ks-labs" >> .npmrc
+        scope: "ksgl"
+    - run: echo "registry=https://npm.pkg.github.com/ksgl" >> .npmrc
     - run: npm publish $(ls *.tgz)
       env:
         NODE_AUTH_TOKEN: ${{secrets.AUTH_TOKEN}}
