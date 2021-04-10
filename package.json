@@ -2,7 +2,7 @@
   "name": "@ks-labs/indicative-vue",
   "version": "1.0.3",
   "description": "",
-  "author": "Victor Lessa",
+  "author": "ks-labs",
   "files": [
     "dist/*"
   ],
