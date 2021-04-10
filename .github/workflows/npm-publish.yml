@@ -21,19 +21,19 @@ jobs:
           node-version: 14.0.0
       - run: npm ci
 
-deploy-package:
-  needs: [build]
-  name: "Deploy Package to Actions"
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js 12.18.3
-      uses: actions/setup-node@v1
-      with:
-        node-version: 14.0.0
-        registry-url: https://npm.pkg.github.com/
-        scope: "@ks-labs"
-    - run: echo "registry=https://npm.pkg.github.com/ks-labs" >> .npmrc
-    - run: npm publish $(ls *.tgz)
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.AUTH_TOKEN}}
+  deploy-package:
+    needs: [build]
+    name: "Deploy Package to Actions"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js 12.18.3
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.0.0
+          registry-url: https://npm.pkg.github.com/
+          scope: "@ks-labs"
+      - run: echo "registry=https://npm.pkg.github.com/ks-labs" >> .npmrc
+      - run: npm publish $(ls *.tgz)
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.AUTH_TOKEN}}
