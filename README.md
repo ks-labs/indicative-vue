@@ -7,14 +7,14 @@ Esse projeto é uma abstração do Validation utilizado no Adonis com o pacote i
 Baixe o pacote rodando em seu terminal:
 
 ```bash
-  npm i @victorlessa/indicative-vue
+  npm i @ksg/indicative-vue
 ```
 
 Instale o pacote no seu projeto Vue.js
 
 ```js
   ...
-  import IndicativeVue from "@victorlessa/indicative-vue";
+  import IndicativeVue from "@ksg/indicative-vue";
   ...
   Vue.use(IndicativeVue);
   ...
@@ -82,7 +82,7 @@ Caso você deseja retornar somente a lista de erro podera alterar as opções no
 
 ```js
     ...
-  import IndicativeVue from "@victorlessa/indicative-vue";
+  import IndicativeVue from "@ksg/indicative-vue";
   ...
   Vue.use(IndicativeVue, {return_error: true});
   ...
@@ -109,7 +109,7 @@ E na configuração do plugin:
 
 ```js
       ...
-  import IndicativeVue from "@victorlessa/indicative-vue";
+  import IndicativeVue from "@ksg/indicative-vue";
   import CustomValidations from 'src/customValidation/NameValidation.js'
   ...
   Vue.use(IndicativeVue, {

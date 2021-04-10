@@ -2,8 +2,6 @@
   <div id="app">
     <div id="toi"></div>
     <div id="toi_message"></div>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
@@ -17,7 +15,7 @@ export default {
   },
   async created() {
     const a = await this.$indicative(
-      { toi: 434 },
+      { toi: "4d34" },
       require("@/validation/RouteItems.js")
     );
     if (!a.valid) return;
