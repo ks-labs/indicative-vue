@@ -20,7 +20,24 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
-
+package:
+  needs: [build]
+  runs-on: ubuntu-18.04
+  steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - run: npm run build
+    - run: npm ci
+    - run: npm version prerelease --preid=ci-$GITHUB_RUN_ID --no-git-tag-version
+    - run: npm pack
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: package
+        path: "*.tgz"
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
