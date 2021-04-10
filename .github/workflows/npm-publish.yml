@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: 12
       - run: npm ci
+
 package:
   needs: [build]
   runs-on: ubuntu-18.04
@@ -38,6 +39,7 @@ package:
       with:
         name: package
         path: "*.tgz"
+
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
